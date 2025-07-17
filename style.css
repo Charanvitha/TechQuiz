@@ -1,0 +1,164 @@
+/* === Body background and layout === */
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/006/691/884/non_2x/blue-question-mark-background-with-text-space-quiz-symbol-vector.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 6%;
+}
+
+/* === Main quiz container === */
+.main-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 5%; /* Moves box to left side */
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* === Heading === */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* === Timer and Progress bar === */
+.timer-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+#progressBar {
+    flex: 1;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#progress {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* === Questions === */
+.question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+}
+
+.options li {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.options li:hover {
+    background-color: #d0e6ff;
+}
+
+/* Correct & wrong answer styles after submission */
+.options li.correct {
+    background-color: #c8e6c9;
+    color: green;
+}
+
+.options li.wrong {
+    background-color: #ffcdd2;
+    color: red;
+}
+
+/* === Buttons === */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0b6623;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* === Result section === */
+#result {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 25px;
+    color: #333;
+}
+
+/* === Review mode styles === */
+.review-mode .question {
+    margin-top: 25px;
+}
+
+.review-mode .options li {
+    cursor: default;
+}
+
+/* === Responsive design === */
+@media (max-width: 480px) {
+    .main-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #timer {
+        font-size: 1rem;
+    }
+}
