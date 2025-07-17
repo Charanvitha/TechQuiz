@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Tech Quiz</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Tech Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="main-container" id="start-screen">
+  <h1>Tech Quiz App</h1>
+  <button id="start-btn">Start Quiz</button>
+</div>
+
+
+  <div class="main-container quiz-container" id="quiz-screen" style="display: none;">
+    <h1>Tech Quiz</h1>
+
+    <div class="timer-progress">
+      <span id="timer">Time: 60</span>
+      <div id="progressBar"><div id="progress"></div></div>
+    </div>
+
+    <form id="quiz-form">
+      <div class="question-cont"></div>
+
+      <div class="btn-group">
+        <button type="button" id="prev-btn">Previous</button>
+        <button type="button" id="next-btn">Next</button>
+        <button type="submit" id="submit-btn">Submit</button>
+      </div>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
